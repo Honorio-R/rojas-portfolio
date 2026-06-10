@@ -9,10 +9,10 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 const Hero = () => {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-20">
       <div className="container max-w-7xl mx-auto">
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
@@ -26,17 +26,17 @@ const Hero = () => {
             </motion.div>
 
             <motion.div variants={fadeInUp} className="flex items-center gap-5 mb-6">
-              <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-[#1e6ff5]/40 shrink-0">
+              <div className="w-40 h-40 rounded-full overflow-hidden ring-2 ring-[#1e6ff5]/40 shrink-0">
                 <Image
                   src="/projects/profile.png"
                   alt="Profile"
-                  width={64}
-                  height={64}
-                  className="w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
+                  className="w-full h-full object-fill"
                 />
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-                Hi, I&apos;m{' '}
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight">
+                Hi, I&apos;m {' '}
                 <span className="text-[#4d93ff]">Honorio Rojas</span>
               </h1>
             </motion.div>
@@ -59,18 +59,6 @@ const Hero = () => {
                 Contact Me
               </Link>
             </motion.div>
-
-            <motion.div variants={fadeInUp} className="flex items-center gap-5">
-              <Link href="/" className="text-[#7a8899] hover:text-[#4d93ff] transition-colors">
-                <FaGithub className="w-5 h-5" />
-              </Link>
-              <Link href="/" className="text-[#7a8899] hover:text-[#4d93ff] transition-colors">
-                <FaLinkedin className="w-5 h-5" />
-              </Link>
-              <Link href="/" className="text-[#7a8899] hover:text-[#4d93ff] transition-colors">
-                <FaTwitter className="w-5 h-5" />
-              </Link>
-            </motion.div>
           </div>
 
           <motion.div variants={scaleIn}>
@@ -84,13 +72,13 @@ const Hero = () => {
               <div className="text-[#e8edf5] space-y-0.5">
                 <div>
                   <span className="text-[#4d93ff]">const</span>{' '}
-                  <span className="text-[#f7c67a]">developer</span>{' '}
+                  <span className="text-[#f7c67a]">information</span>{' '}
                   <span className="text-[#e8edf5]">= {'{'}</span>
                 </div>
                 <div className="pl-5">
                   <span className="text-[#63d4a6]">name</span>
                   <span className="text-[#e8edf5]">: </span>
-                  <span className="text-[#f7c67a]">&quot;John Doe&quot;</span>
+                  <span className="text-[#f7c67a]">&quot;Honorio Rojas&quot;</span>
                   <span className="text-[#e8edf5]">,</span>
                 </div>
                 <div className="pl-5">
@@ -110,23 +98,12 @@ const Hero = () => {
                   <span className="text-[#e8edf5]">],</span>
                 </div>
                 <div className="pl-5">
-                  <span className="text-[#63d4a6]">available</span>
+                  <span className="text-[#63d4a6]">availability</span>
                   <span className="text-[#e8edf5]">: </span>
                   <span className="text-[#4d93ff]">true</span>
                   <span className="text-[#e8edf5]">,</span>
                 </div>
-                <div className="pl-5">
-                  <span className="text-[#63d4a6]">coffee</span>
-                  <span className="text-[#e8edf5]">: </span>
-                  <span className="text-[#f7c67a]">&quot;\u221e&quot;</span>
-                </div>
                 <div><span className="text-[#e8edf5]">{'};'}</span></div>
-                <div className="pt-2 text-[#7a8899]">{'// currently building awesome stuff'}</div>
-                <div>
-                  <span className="text-[#4d93ff]">export default</span>{' '}
-                  <span className="text-[#f7c67a]">developer</span>
-                  <span className="text-[#e8edf5]">;</span>
-                </div>
               </div>
             </div>
           </motion.div>

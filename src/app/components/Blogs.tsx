@@ -10,7 +10,7 @@ const Blogs = () => {
   const recent = blogs.slice(0, 3)
 
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="container max-w-7xl mx-auto">
         <motion.div
           className="flex items-center gap-4 mb-12"

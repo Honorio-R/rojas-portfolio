@@ -14,7 +14,7 @@ const Projects = () => {
 
   return (
     <>
-      <section className="py-24">
+      <section className="py-20">
         <div className="container max-w-7xl mx-auto">
           {/* section header */}
           <motion.div

@@ -25,13 +25,13 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   //toggle the theme
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "dark");
+    setTheme(theme === "light" ? "dark" : "light");
   } 
 
   useEffect(() => {
     const saveTheme = localStorage.getItem("theme") as Theme | null;
     const systemTheme = window.matchMedia("prefers-color-scheme: dark").matches ? "dark" : "light";
-    const initialTheme = saveTheme || systemTheme;
+    const initialTheme = saveTheme || "dark";
 
     setThemeState(initialTheme);
     document.documentElement.classList.toggle("dark", initialTheme === "dark");

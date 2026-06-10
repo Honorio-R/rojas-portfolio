@@ -17,9 +17,7 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          {/* ── left column ── */}
           <div>
-            {/* available label */}
             <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-7">
               <span className="font-mono text-xs text-[#1e6ff5] tracking-widest uppercase">
                 // open for opportunities
@@ -27,7 +25,6 @@ const Hero = () => {
               <div className="h-px w-16 bg-[#1c2a3d]" />
             </motion.div>
 
-            {/* profile + name */}
             <motion.div variants={fadeInUp} className="flex items-center gap-5 mb-6">
               <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-[#1e6ff5]/40 shrink-0">
                 <Image
@@ -76,17 +73,14 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* ── right column — code card ── */}
           <motion.div variants={scaleIn}>
             <div className="bg-[#111720] border border-[#1c2a3d] rounded-lg p-6 font-mono text-sm leading-7 shadow-2xl shadow-black/30">
-              {/* traffic lights */}
               <div className="flex gap-1.5 mb-5">
                 <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
                 <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
                 <div className="w-3 h-3 rounded-full bg-[#28c840]" />
               </div>
 
-              {/* code */}
               <div className="text-[#e8edf5] space-y-0.5">
                 <div>
                   <span className="text-[#4d93ff]">const</span>{' '}

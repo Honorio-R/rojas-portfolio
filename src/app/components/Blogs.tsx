@@ -12,7 +12,6 @@ const Blogs = () => {
   return (
     <section className="py-24">
       <div className="container max-w-7xl mx-auto">
-        {/* section header */}
         <motion.div
           className="flex items-center gap-4 mb-12"
           initial={{ opacity: 0, y: 16 }}

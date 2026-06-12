@@ -25,21 +25,27 @@ const About = () => {
       {/* ── bio ── */}
       <motion.section className="mb-20" variants={fadeInUp}>
         <SectionHeader label="// about me" />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-          <div className="flex justify-center md:justify-start">
-            <div className="w-44 h-44 rounded-xl overflow-hidden ring-2 ring-[#1e6ff5]/30 ring-offset-4 ring-offset-[#f0f4f8] dark:ring-offset-[#080c12]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div className="flex flex-col gap-6 justify-center md:justify-start">
+            <div className="flex flex-col w-50 h-60 rounded-xl overflow-hidden ring-2 ring-[#1e6ff5]/30 ring-offset-4 ring-offset-[#f0f4f8] dark:ring-offset-[#080c12]">
               <Image src="/projects/profile.png" alt="Profile" width={176} height={176} className="w-full h-full object-cover" />
+            </div>
+            <div className="flex flex-row gap-4">
+              <a
+                className="border border-gray-300 dark:border-[#1c2a3d] text-[#7a8899] px-6 py-2.5 rounded text-sm tracking-wide hover:border-[#1e6ff5] hover:text-[#4d93ff] transition-colors"
+                href='/projects'>View Projects</a>
+              <a
+                className="bg-[#1e6ff5] text-white px-6 py-2.5 rounded font-semibold text-sm tracking-wide hover:bg-[#4d93ff] transition-colors"
+                href='/documents/Honorio_Rojas_CV.pdf'>
+                Download Resume
+              </a>
             </div>
           </div>
 
-          <div>
-            <p className='text-lg text-secondary max-w-3xl'>
+          <div className='mt-4 flex gap-3 mb-6 items-center'>
+            <p className='text-lg text-secondary'>
               Junior Full-Stack Developer with hands-on experience building responsive web and mobile applications for Android and iOS. Proficient in C# .NET for backend development, SQL Server for data storage and management, and Ionic-Angular for frontend development. Experienced in developing end-to-end features, improving both frontend and backend performance, and creating user-friendly interfaces based on client requirements. Comfortable working in both individual and collaborative environments, with direct involvement in client discussions for requirements gathering and system improvements.
             </p>
-            <div className='mt-4 flex gap-3'>
-              <a className='btn btn-primary' href='#projects'>View Projects</a>
-              <a className='btn' href='/resume.pdf'>Download Resume</a>
-            </div>
           </div>
         </div>
       </motion.section>

@@ -1,26 +1,33 @@
+import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-interface ContactRequestBody { 
-  name: string;
-  email: string;
-  message: string;
-}
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(request: Request) { 
+export async function POST(request: Request) {
   try {
-    await request.json() as ContactRequestBody;
-    return NextResponse.json({
-      message: "Message sent successfully"
-    }, {
-      status: 200
-    })
-  } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : "Failed to send message";
-    return NextResponse.json({
-      message: errorMessage
-    },{
-      status: 500
-    });
-  }
+    const { name, email, message } = await request.json();
 
+    await resend.emails.send({
+      from: "email",
+      to: "honoriorojas055@gmail.com",
+      subject: `Portfolio Contact - ${name}`,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+    });
+    
+    return NextResponse.json(
+      { message: "Message sent successfully" },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { message: "Failed to send message" },
+      { status: 500 }
+    );
+  }
 }
